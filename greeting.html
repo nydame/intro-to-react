@@ -24,10 +24,16 @@
     }
 }
 class Time extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentTime: moment().format('LTS'),
+        };
+    }
     render() {
         return (
             <div>
-                <h2>The time is {moment().format('LTS')}</h2>
+                <h2>The time is {this.state.currentTime}</h2>
             </div>
         );
     }
